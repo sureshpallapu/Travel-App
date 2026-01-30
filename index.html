@@ -1,127 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>My Travel Adventures</title>
-<style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f5f7fa;
-      color: #333;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Travel Adventures</title>
+
+  <!-- =======================
+       GLOBAL STYLES
+  ======================== -->
+  <style>
+    * {
+      box-sizing: border-box;
     }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6fb;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* =======================
+       HEADER
+    ======================== */
     header {
       background: linear-gradient(120deg, #4facfe, #00f2fe);
       color: white;
-      padding: 2rem;
+      padding: 3rem 1rem;
       text-align: center;
     }
+
+    header h1 {
+      margin-bottom: 0.5rem;
+      font-size: 2.8rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.95;
+    }
+
+    /* =======================
+       NAVIGATION
+    ======================== */
     nav {
-      background: #222;
-      padding: 0.5rem;
-      text-align: center;
+      background-color: #222;
+      padding: 0.8rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav li {
+      margin: 0 1rem;
+    }
+
     nav a {
       color: white;
-      margin: 0 1rem;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
+      letter-spacing: 0.5px;
     }
+
     nav a:hover {
       text-decoration: underline;
     }
+
+    /* =======================
+       SECTIONS
+    ======================== */
     section {
-      padding: 2rem;
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
+      padding: 3rem 1rem;
     }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2.2rem;
+      color: #222;
+    }
+
+    /* =======================
+       CARD DESIGN
+    ======================== */
     .card {
-      background: white;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      background-color: white;
+      border-radius: 15px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     }
+
     .card img {
-      max-width: 100%;
-      border-radius: 10px;
+      width: 100%;
+      border-radius: 12px;
       margin-top: 1rem;
     }
-    footer {
-      background: #222;
-      color: #aaa;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
+
+    /* =======================
+       TRIPS GRID
+    ======================== */
+    .trip-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
     }
-</style>
+
+    /* =======================
+       GALLERY
+    ======================== */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* =======================
+       CONTACT
+    ======================== */
+    .contact-info p {
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    /* =======================
+       FOOTER
+    ======================== */
+    footer {
+      background-color: #222;
+      color: #bbb;
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    footer p {
+      margin: 0.3rem 0;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
+
 <body>
- 
-<header>
-<h1>My Travel Adventures 🌍</h1>
-<p>Stories, photos, and memories from around the world</p>
-</header>
- 
-<nav>
-<a href="#about">About Me</a>
-<a href="#travels">My Trips</a>
-<a href="#gallery">Gallery</a>
-<a href="#contact">Contact</a>
-</nav>
- 
-<section id="about">
-<div class="card">
-<h2>About Me</h2>
-<p>
-      Hi! I'm a travel enthusiast who loves exploring new places,
-      trying local food, and capturing moments. This website is my
-      personal travel diary.
-</p>
-</div>
-</section>
- 
-<section id="travels">
-<div class="card">
-<h2>My Trips</h2>
-<h3>📍 Paris, France</h3>
-<p>
-      The city of lights stole my heart with its architecture,
-      art, and cafés.
-</p>
-<img src="https://via.placeholder.com/800x400" alt="Paris" />
-</div>
- 
-  <div class="card">
-<h3>📍 Bali, Indonesia</h3>
-<p>
-      Beaches, temples, and peaceful vibes – Bali was unforgettable.
-</p>
-<img src="https://via.placeholder.com/800x400" alt="Bali" />
-</div>
-</section>
- 
-<section id="gallery">
-<div class="card">
-<h2>Photo Gallery</h2>
-<p>Add your favorite travel photos here.</p>
-</div>
-</section>
- 
-<section id="contact">
-<div class="card">
-<h2>Contact</h2>
-<p>
-      Want to connect or travel together?
-      Email me at <strong>youremail@example.com</strong>
-</p>
-</div>
-</section>
- 
-<footer>
-<p>© 2026 My Travel Adventures | Made with ❤️</p>
-</footer>
- 
+
+  <!-- =======================
+       HEADER
+  ======================== -->
+  <header>
+    <h1>My Travel Adventures 🌍</h1>
+    <p>Stories, photos, and unforgettable memories from around the world</p>
+  </header>
+
+  <!-- =======================
+       NAVIGATION
+  ======================== -->
+  <nav>
+    <ul>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#travels">My Trips</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- =======================
+       ABOUT SECTION
+  ======================== -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+      <p>
+        Hello! 👋 I’m a passionate traveler who loves exploring new destinations,
+        learning about cultures, tasting local cuisines, and capturing moments
+        through photography.
+      </p>
+      <p>
+        This website is my personal travel journal where I share stories,
+        experiences, and photos from my journeys across different countries.
+        Traveling has taught me patience, curiosity, and appreciation for
+        diversity.
+      </p>
+    </div>
+  </section>
+
+  <!-- =======================
+       TRAVELS SECTION
+  ======================== -->
+  <section id="travels">
+    <h2>My Trips</h2>
+
+    <div class="trip-grid">
+
+      <div class="card">
+        <h3>📍 Paris, France</h3>
+        <p>
+          Paris is known as the city of love and lights. From the Eiffel Tower
+          to cozy cafés, every corner feels artistic and romantic.
+        </p>
+        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34" alt="Paris">
+      </div>
+
+      <div class="card">
+        <h3>📍 Bali, Indonesia</h3>
+        <p>
+          Bali offered peace, beaches, temples, and breathtaking sunsets.
+          The culture and hospitality were truly heartwarming.
+        </p>
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Bali">
+      </div>
+
+      <div class="card">
+        <h3>📍 Rome, Italy</h3>
+        <p>
+          Walking through Rome felt like stepping into history. Ancient ruins,
+          beautiful streets, and incredible food everywhere.
+        </p>
+        <img src="https://images.unsplash.com/photo-1526481280691-906c7d5b45d6" alt="Rome">
+      </div>
+
+      <div class="card">
+        <h3>📍 Tokyo, Japan</h3>
+        <p>
+          Tokyo blends tradition and technology perfectly. From temples to
+          neon-lit streets, it’s an unforgettable experience.
+        </p>
+        <img src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c" alt="Tokyo">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =======================
+       GALLERY SECTION
+  ======================== -->
+  <section id="gallery">
+    <h2>Photo Gallery</h2>
+
+    <div class="gallery-grid">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Gallery Image">
+      <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d" alt="Gallery Image">
+      <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Gallery Image">
+      <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429" alt="Gallery Image">
+      <img src="https://images.unsplash.com/photo-1493558103817-58b2924bce98" alt="Gallery Image">
+      <img src="https://images.unsplash.com/photo-1519817650390-64a93db511aa" alt="Gallery Image">
+    </div>
+  </section>
+
+  <!-- =======================
+       CONTACT SECTION
+  ======================== -->
+  <section id="contact">
+    <h2>Contact</h2>
+
+    <div class="card contact-info">
+      <p>📧 Email: travellover@example.com</p>
+      <p>📍 Location: Earth 🌎</p>
+      <p>📸 Instagram: @mytraveladventures</p>
+      <p>
+        Interested in collaborating or traveling together?
+        Feel free to reach out anytime!
+      </p>
+    </div>
+  </section>
+
+  <!-- =======================
+       FOOTER
+  ======================== -->
+  <footer>
+    <p>© 2026 My Travel Adventures</p>
+    <p>Built with ❤️ using HTML & CSS</p>
+  </footer>
+
 </body>
 </html>
+
